@@ -1,0 +1,45 @@
+//mobile devices 
+.age-calc{
+    position: relative;
+    height: 100vh;
+}
+@media (max-width: $mobile) { 
+    .container{
+        position: absolute;
+        margin:70px 10px;
+        padding: 70px 15px !important;
+    }
+    .boxes-container{
+        gap: 5px !important;
+    }
+    input[type='text'] {
+        width: 100px !important;
+    }
+    .submit {
+        width: 100%;
+        &::after {
+            top: -35px;
+            left:50%;
+            transform: translateX(-50%);
+        }
+    }
+ }
+
+
+@media (min-width: $desktop) { 
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate( -50%, -50%);
+
+    }
+    .submit {
+        width: 560px;
+        &::after {
+            top: -35px;
+            right: 0;
+            
+        }
+    }
+ }

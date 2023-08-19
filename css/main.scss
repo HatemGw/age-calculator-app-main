@@ -1,0 +1,90 @@
+@import 'scss/variables';
+@import 'scss/layout';
+@import 'scss/global';
+@import 'scss/inputs';
+
+
+//age-calc
+
+.age-calc {
+    background-color: $Light-grey;
+}
+
+.container{
+    background-color: $White;
+    padding: 70px 50px;
+    border-radius: 30px 30px 190px 30px;
+    //container end
+}
+
+.boxes-container{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    label {
+        text-transform: capitalize;
+        padding-bottom: 10px;
+        color: $Smokey-grey;
+    }   
+}
+.submit {
+    margin: 100px 0;
+    position: relative;
+    background-color: $Smokey-grey;
+    height: 1px;
+    &::after {
+        position: absolute;
+        content: '';
+        background-color: $Purple;
+        background-image: url('/assets/images/icon-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        
+        height: 40px;
+        width: 46px;
+        padding: 15px;
+        border-radius: 50%;
+    }
+    &:hover {
+        cursor: pointer;
+        &::after{
+            background-color: $Off-black;
+        }
+    }
+}
+
+.result{
+    h1{
+        font:{
+            size: 50px;
+            weight: bold;
+        }
+    }
+    h1 > span:first-child{
+        color: $Purple;
+    }
+}
+
+
+.not-valid{
+    position: relative;
+    label {
+        color: $Light-red !important;
+    }
+    input[type='text'] {
+
+        border-color: $Light-red !important;
+    }
+    &::after{
+        position: absolute;
+        content: 'not valid value';
+        color: $Light-red !important;
+        font-size: 16px;
+        bottom: -50px;
+        left: 0;
+    }
+}

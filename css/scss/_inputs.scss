@@ -1,0 +1,15 @@
+input[type='text']{
+    padding: 15px 5px;
+    width: 110px;
+    font-weight: 700;
+    color: $Off-black;
+    cursor: pointer;
+    border: 1px solid $Smokey-grey;
+    border-radius: 5px;
+
+    &:focus {
+        outline: none;
+        border-color: $Purple ;
+        caret-color: $Purple;
+    }
+}

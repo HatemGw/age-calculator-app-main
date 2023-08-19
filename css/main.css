@@ -1,0 +1,146 @@
+.age-calc {
+  position: relative;
+  height: 100vh;
+}
+
+@media (max-width: 375px) {
+  .container {
+    position: absolute;
+    margin: 70px 10px;
+    padding: 70px 15px !important;
+  }
+  .boxes-container {
+    gap: 5px !important;
+  }
+  input[type=text] {
+    width: 100px !important;
+  }
+  .submit {
+    width: 100%;
+  }
+  .submit::after {
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .submit {
+    width: 560px;
+  }
+  .submit::after {
+    top: -35px;
+    right: 0;
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  font-size: 32px;
+}
+
+input[type=text] {
+  padding: 15px 5px;
+  width: 110px;
+  font-weight: 700;
+  color: hsl(0, 0%, 8%);
+  cursor: pointer;
+  border: 1px solid hsl(0, 1%, 44%);
+  border-radius: 5px;
+}
+input[type=text]:focus {
+  outline: none;
+  border-color: hsl(259, 100%, 65%);
+  caret-color: hsl(259, 100%, 65%);
+}
+
+.age-calc {
+  background-color: hsl(0, 0%, 86%);
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  padding: 70px 50px;
+  border-radius: 30px 30px 190px 30px;
+}
+
+.boxes-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+.box label {
+  text-transform: capitalize;
+  padding-bottom: 10px;
+  color: hsl(0, 1%, 44%);
+}
+
+.submit {
+  margin: 100px 0;
+  position: relative;
+  background-color: hsl(0, 1%, 44%);
+  height: 1px;
+}
+.submit::after {
+  position: absolute;
+  content: "";
+  background-color: hsl(259, 100%, 65%);
+  background-image: url("/assets/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
+  width: 46px;
+  padding: 15px;
+  border-radius: 50%;
+}
+.submit:hover {
+  cursor: pointer;
+}
+.submit:hover::after {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.result h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+.result h1 > span:first-child {
+  color: hsl(259, 100%, 65%);
+}
+
+.not-valid {
+  position: relative;
+}
+.not-valid label {
+  color: hsl(0, 100%, 67%) !important;
+}
+.not-valid input[type=text] {
+  border-color: hsl(0, 100%, 67%) !important;
+}
+.not-valid::after {
+  position: absolute;
+  content: "not valid value";
+  color: hsl(0, 100%, 67%) !important;
+  font-size: 16px;
+  bottom: -50px;
+  left: 0;
+}/*# sourceMappingURL=main.css.map */
